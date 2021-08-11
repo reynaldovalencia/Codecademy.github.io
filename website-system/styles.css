@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0 10px;
+  background-color: gainsboro;
+}
+
+h1 {
+  /* margin: 0 auto; */
+  margin-top: 50px;
+  text-align: center;
+}
+
+.container2 {
+  border-collapse: collapse;
+  margin: 10px auto;
+  font-size: 0.9em;
+  padding: 10px;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden; /* para que funcione el radio*/
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+}
+
+.colors-container {
+  width: 100%;
+}
+.color-box {
+  /* border: 2px solid #a2a2a6; */
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+  margin: 20px auto;
+  min-height: 100px;
+}
+
+.cool-blue {
+  background-color: #2d5dcc;
+  color: #fff;
+  transition: 0.5s; /* Para hacer la animacion de hover*/
+}
+
+.cool-blue:hover {
+  transform: scale(1.3);
+  box-shadow: 2px 2px 2px #000;
+  /* z-index: 2; */
+}
+
+.pink {
+  background-color: #d957d9;
+  color: #000;
+  transition: 0.5s;
+}
+
+.pink:hover {
+  transform: scale(1.3);
+  box-shadow: 2px 2px 2px #000;
+  /* z-index: 2; */
+}
+
+.mint-green {
+  background-color: #4fe0b0;
+  transition: 0.5s;
+}
+
+.mint-green:hover {
+  transform: scale(1.3);
+  box-shadow: 2px 2px 2px #000;
+  /* z-index: 2; */
+}
+
+.beige {
+  background-color: #efd9ca;
+  transition: 0.5s;
+}
+
+.beige:hover {
+  transform: scale(1.3);
+  box-shadow: 2px 2px 2px #000;
+  /* z-index: 2; */
+}
+
+.font-box {
+  width: 45%;
+  display: inline-block;
+}
+
+.font-label {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.source-code {
+  font-family: "Source Code Pro", monospace;
+}
+
+.nunito-sans {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.regular {
+  font-style: normal;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.text-panel h1 {
+  font-weight: 700;
+  font-size: 32px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.text-panel h2 {
+  font-weight: 500;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+.text-panel p {
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
