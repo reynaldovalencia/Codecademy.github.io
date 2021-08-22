@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+
+:root {
+  --ff-primary: "Lato", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--ff-primary);
+}
+ul {
+  list-style-type: none; /* elimina el subrayado*/
+}
+body {
+  padding-top: 87px; /* para mostrar el alto del menu*/
+  font-size: 22px;
+}
+
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none; /* elimina los bullets*/
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 100;
+  width: 100%;
+  border-bottom: solid 1px #c6c1c1;
+}
+
+header .content {
+  display: flex;
+  align-items: center;
+  padding: 1.875rem;
+}
+
+/* Clase del logo */
+header .logo {
+  flex: 1; /* Esto mueve el menu a la derecha*/
+  font-family: "Cinzel", sans-serif;
+  font-weight: 700;
+  color: black;
+  font-size: 1.25rem;
+}
+
+header nav ul {
+  display: flex;
+}
+
+nav li {
+  padding-left: 3.5rem; /*Distancia en entre elementos del menu*/
+}
+
+nav a {
+  vertical-align: bottom;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #4a4a4a;
+}
+
+.mission {
+  display: flex;
+  height: 43.5rem;
+  background-image: url("https://content.codecademy.com/PRO/independent-practice-projects/flexbox-business-site/img/skyscrapers.jpg");
+}
+
+.mission .content {
+  margin: auto;
+  background-color: white;
+  width: 50%; /* si fuera 100% cubre todo el ancho de la pantalla*/
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center; /* centra el cuadro blanco*/
+}
+
+#portfolio {
+  min-height: 500px;
+  margin: auto;
+  padding-top: 5rem;
+  text-align: center; /* centrar texto portafolio*/
+}
+
+.companies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.company {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px; /* reduce el tamaño de las imagenes*/
+  padding: 10px;
+  height: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.company span {
+  padding: 5px;
+  min-width: 240px;
+  font-weight: bold;
+  text-align: center;
+}
+/* Aqui termina las imagenes de las compañias */
+
+.team {
+  padding-top: 70px;
+  padding-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: url("https://content.codecademy.com/PRO/independent-practice-projects/flexbox-business-site/img/blurred-road.jpg");
+  align-items: center;
+}
+
+.teammate {
+  padding: 10px;
+  color: white;
+  flex-basis: 280px;
+}
+
+#team-container h2 {
+  text-align: center; /* Centra el titulo Our Team*/
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.teammate img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.contact,
+.copyright {
+  padding-top: 20px;
+  color: black;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+/* https://content.codecademy.com/PRO/independent-practice-projects/flexbox-business-site/example-site/index.html#team */
