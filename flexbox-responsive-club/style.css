@@ -1,0 +1,402 @@
+/*
+==================
+FONTS
+==================
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swa");
+
+/*
+==================
+VARIABLES
+==================
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: #ff692e;
+  --clr-primary-2: #ff7c47;
+  --clr-primary-3: #ff8e61;
+  /* primary/main color */
+  --clr-primary-5: #ffa07a; /* lightsalmon*/
+  /* lighter shades of primary color */
+  --clr-primary-6: #ffb294;
+  --clr-primary-7: #ffc4ad;
+  --clr-primary-8: #ffd7c7;
+  /*analogous */
+  --clr-primary-9: #ff7a97;
+  --clr-primary-10: #ffe37a;
+  /* complementary*/
+  --clr-primary-11: #7ad9ff;
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #ffffff;
+  --ff-primary: "Montserrat", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*
+==================
+GLOBAL STYLES
+==================
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: 16px;
+  margin: 0;
+  background-color: var(--clr-primary-5);
+  padding-top: 69px;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  /* letter-spacing: var(--spacing); */
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+/*
+==================
+GLOBAL CLASSES
+==================
+*/
+
+.btn {
+  text-transform: uppercase;
+  background: Coral;
+  color: white;
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  /* font-weight: 700; */
+  transition: all 0.3s linear;
+  font-size: 0.875rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: var(--dark-shadow);
+}
+
+.btn:hover {
+  color: wheat;
+  background: salmon;
+}
+
+/*
+==================
+NAVBAR
+==================
+*/
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* esto lo centro*/
+  background: var(--clr-primary-5); /* con esto la barra se muestra en color*/
+  z-index: 2;
+  /* text-align: center; 
+  padding-left: 2rem;
+  padding-right: 2rem; */
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: center; /*centra*/
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.navbar-link {
+  color: var(--clr-white);
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  margin-right: 5rem;
+  letter-spacing: var(--spacing);
+  transition: var(--transition);
+}
+
+.navbar-link:hover {
+  color: var(--clr-primary-11);
+}
+/*
+==================
+INTRO
+==================
+*/
+
+.intro {
+  min-height: 100vh;
+  background: var(--ff-primary); /* #ffa07a     #7AD9FF*/
+  display: flex;
+  justify-content: center; /* alinea horizontal .hero-banner*/
+  align-items: center; /* alinea vertical los elementos, coloca lo que esta dentro de hero en el centro que en este caso es .hero-baner*/
+}
+
+.intro-banner {
+  font-family: var(--ff-primary);
+  text-align: center; /* centra texto que esta dentro de hero-banner*/
+  color: white;
+  padding: 0 3rem;
+}
+
+.intro-banner h1 {
+  text-transform: uppercase; /* pone en mayuscula el h1*/
+  font-weight: 800;
+  font-size: 5rem;
+  color: --clr-white;
+}
+
+.intro-banner p {
+  max-width: 35rem; /* Reduce el tamaño del espacio para que se vea el texto que estan en el elemento p*/
+  margin-left: auto; /* pone texto en el centro*/
+  margin-right: auto;
+  letter-spacing: var(--spacing);
+}
+
+.intro-btn {
+  padding: 0.9rem 1.6rem;
+  font-size: 1.25rem;
+  /* background: white; */
+}
+
+.intro-btn:hover {
+  background: transparent;
+  color: var(--clr-white);
+  border-color: var(--clr-white);
+}
+
+/* This styles are for desktop size */
+@media screen and (min-width: 768px) {
+  .intro {
+    background: linear-gradient(rgba(255, 160, 122, 0.6), rgba(0, 0, 0, 0.6)),
+      url("./img/jogger-banner.jpg") center / cover no-repeat;
+  }
+
+  .intro-banner {
+    padding: 0;
+  }
+
+  .intro-banner p {
+    max-width: 45rem;
+  }
+}
+
+/*
+==================
+SUMMARY
+==================
+*/
+.summary {
+  background: var(--clr-primary-10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  align-items: center;
+}
+
+.summary h2 {
+  font-weight: 900;
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.summary h3 {
+  letter-spacing: var(--spacing);
+  text-align: center;
+  padding-bottom: 1rem;
+  color: var(--clr-grey-5);
+  max-width: 50rem;
+}
+
+.summary-banner {
+  font-family: var(--ff-primary);
+  text-align: center; /* centra texto que esta dentro de hero-banner*/
+  padding: 0 3rem;
+}
+
+.summary-btn {
+  padding: 0.9rem 1.6rem;
+  font-size: 1.25rem;
+  background: var(--clr-primary-11);
+  color: white;
+}
+
+.summary-btn:hover {
+  background: transparent;
+  color: var(--clr-grey-5);
+  font-weight: 700;
+  border-color: var(--clr-white);
+}
+
+/*
+==================
+PHOTOS 
+==================
+*/
+.photos {
+  margin: 4em auto;
+}
+
+/*Esto hace que la imagen se haga pequeña*/
+.image-container img {
+  max-width: 100%; /*reduce el tamaño de la imagen al contenedor w: 90% h: 65% */
+  width: 450px; /*cambia tamaño imagen*/
+}
+
+.photos .images-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 0 1%;
+}
+
+@media only screen and (max-width: 1048px) {
+  .image-container img {
+    width: 100%;
+  }
+}
+/*
+==================
+TERMINOMIAL
+==================
+*/
+.center {
+  text-align: center;
+}
+.testimonial .content {
+  background: white;
+  padding: 5rem 0;
+}
+
+.testimonial .quote {
+  padding-right: 1.875rem;
+  font-family: "Palatino", serif;
+  font-size: 1.875rem;
+  line-height: 1.1;
+  font-style: italic;
+  color: #4a4a4a;
+}
+
+.testimonial p {
+  font-weight: 600;
+  padding-top: 30px;
+  margin-left: 20px;
+  color: var(--clr-grey-6);
+}
+/*
+==================
+MEETUP
+==================
+*/
+.meetup-section {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 5%;
+  background-color: var(--clr-primary-11);
+}
+
+.meetup {
+  padding: 2rem;
+  margin: 0px 1.25rem;
+  background-color: white;
+  box-shadow: var(--dark-shadow);
+  border-radius: 20px;
+}
+
+.meetup h2 {
+  color: var(--clr-grey-5);
+  padding-bottom: 1rem;
+}
+
+.meetup h3 {
+  color: var(--clr-grey-5);
+  padding-top: 2rem;
+}
+
+.meetup .images-container {
+  width: 90%;
+  height: 65%;
+  margin: 0 auto;
+}
+
+.meetup .content {
+  padding: 2.5rem 0; /* aumenta el padding en los cuadros de featured*/
+}
+/*
+==================
+FOOTER
+==================
+*/
+/* Footer */
+
+footer {
+  text-align: center; /*centra el menu*/
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center; /*centra*/
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  color: var(--clr-white);
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  margin-right: 5rem;
+  letter-spacing: var(--spacing);
+  transition: var(--transition);
+}
+
+.footer-link:hover {
+  color: var(--clr-primary-11);
+}
